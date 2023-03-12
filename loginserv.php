@@ -6,7 +6,7 @@ if (isset($_POST['loginbtn'])) {
     } else {
         $user = $_POST['emailid'];
         $pass = $_POST['password'];
-        $conn = mysqli_connect("localhost", "root", "",);
+        $conn = mysqli_connect("localhost", "root", "");
         $db = mysqli_select_db($conn, "logindetails");
         $result = mysqli_query($conn, "SELECT * FROM details WHERE password='$pass' AND username='$user' ");
 
